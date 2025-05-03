@@ -30,7 +30,3 @@ variable "waypoint_application" {
     error_message = "waypoint_application must not contain dashes or underscores."
   }
 }
-
-variable "new-variable"{
-description = "new input"
-}
