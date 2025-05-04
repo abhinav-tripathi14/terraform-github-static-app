@@ -25,6 +25,7 @@ variable "slack_hook_url" {
 variable "waypoint_application" {
   type        = string
   description = "Name of the Waypoint application."
+default = "mywebapp"
 
   validation {
     condition     = !contains(["-", "_"], var.waypoint_application)
