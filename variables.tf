@@ -15,6 +15,7 @@ variable "destination_org" {
 
 variable "gh_token" {
   description = "Github token with permissions to create and delete repos."
+  sensitive=true
 }
 
 variable "slack_hook_url" {
@@ -25,7 +26,7 @@ variable "slack_hook_url" {
 variable "waypoint_application" {
   type        = string
   description = "Name of the Waypoint application."
-default = "mywebapp"
+  default = "mywebapp"
 
   validation {
     condition     = !contains(["-", "_"], var.waypoint_application)
